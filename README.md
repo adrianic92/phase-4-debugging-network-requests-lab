@@ -64,10 +64,12 @@ developing your own process.
 
   - How I debugged:
 
+  I submitted the form and took a look at the console on the react app page. There were multiple errors shown. The main error that stood out was the uninitialized constant  ToysController::Toys because it should have been singular and not plural. Once that was corrected, it worked as it was supposed to.
+
 - Update the number of likes for a toy
 
-  - How I debugged:
+  - How I debugged: I clicked the like button and saw that there was an Uncaught (in promise) SyntaxError: unexpected end of JSON input. So I checked the application controller for Toy and found that the render part was missing. Once I added it, it was fixed and worked as it was supposed to.
 
 - Donate a toy to Goodwill (and delete it from our database)
 
-  - How I debugged:
+  - How I debugged: I looked at the server for rails and saw that there was an ActionController::RoutingError that no route matched [DELETE]. So I added the "destroy" part to my controller.
